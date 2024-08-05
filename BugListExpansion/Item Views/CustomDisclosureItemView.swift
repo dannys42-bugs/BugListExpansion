@@ -14,7 +14,12 @@ struct CustomDisclosureItemView: View {
         DisclosureGroup(isExpanded: $isExpanded) {
             ExpandedContentView()
         } label: {
-            Toggle("Custom Disclosure", isOn: $isExpanded.animation())
+            VStack(alignment: .leading) {
+                Toggle("Custom Disclosure", isOn: $isExpanded.animation())
+
+                Text("Bug: This has an undesired 'bounce' on expansion")
+                    .font(.caption)
+            }
         }
         .disclosureGroupStyle(CustomDisclosureGroupStyle())
     }

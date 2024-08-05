@@ -14,7 +14,7 @@ struct FixedItemView: View {
                 .fill(.blue)
                 .stroke(.black)
 
-            Text("This is an item")
+            Text("Fixed row item.")
         }
     }
 }

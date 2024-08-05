@@ -11,11 +11,15 @@ struct VStackExpandingItemView: View {
     @State private var isExpanded = false
 
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             HStack {
                 Text("VStack")
                 Toggle("Expand", isOn: $isExpanded.animation())
             }
+
+            Text("Bug: This has an undesired 'bounce' on expansion")
+                .font(.caption)
+
 
             if isExpanded {
                 ExpandedContentView()

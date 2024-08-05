@@ -14,7 +14,12 @@ struct DefaultDisclosureItemView: View {
         DisclosureGroup(isExpanded: $isExpanded) {
             ExpandedContentView()
         } label: {
-            Text("Default Disclosure")
+            VStack(alignment: .leading) {
+                Text("Default Disclosure")
+
+                Text("This works correctly.  Expansion without \"bounce\"")
+                    .font(.caption)
+            }
         }
     }
 }
