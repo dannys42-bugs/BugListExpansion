@@ -12,11 +12,17 @@ struct ContentView: View {
     var body: some View {
         List {
             FixedItemView()
+                .listRowSeparator(.hidden)
             VStackExpandingItemView()
+                .listRowSeparator(.hidden)
             DefaultDisclosureItemView()
+                .listRowSeparator(.hidden)
             CustomDisclosureItemView()
+                .listRowSeparator(.hidden)
             FixedItemView()
+                .listRowSeparator(.hidden)
         }
+        .listStyle(.plain)
         .padding()
     }
 }
